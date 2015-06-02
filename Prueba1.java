@@ -27,4 +27,11 @@ public class Prueba1 {
 		assertEquals(10, bitset2.length());
 	}
 	
+	//Comprobamos si al cambiar una posición del bitset a un '1' el cambio se hace efectivo. 
+		@Test
+		public void testSetBit() {
+			bitset3.set(1,'1');
+			assertEquals('1', bitset3.get(1));
+		}
+	
 }
