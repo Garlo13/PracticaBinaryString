@@ -28,10 +28,15 @@ public class Prueba1 {
 	}
 	
 	//Comprobamos si al cambiar una posición del bitset a un '1' el cambio se hace efectivo. 
-		@Test
-		public void testSetBit() {
-			bitset3.set(1,'1');
-			assertEquals('1', bitset3.get(1));
-		}
+	@Test
+	public void testSetBit() {
+		bitset3.set(1,'1');
+		assertEquals('1', bitset3.get(1));
+	}
+	//Comprobamos si al acceder fuera de los límites del array nos lanza una excepción tipo BinayStringException.  
+	@Test(expected = BinaryStringException.class)
+	public void testGetOutOfLimitBit()  {
+		bitset4.get(56);
+	}
 	
 }
